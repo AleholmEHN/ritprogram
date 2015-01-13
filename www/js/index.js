@@ -55,40 +55,72 @@ app.initialize();
 
 $(document).ready(function() 
 {
-    $(function() {
+    
+    $(function() 
+    {
         var w = $(window).width();
-        var mittenW = w*0.80;   
+        var mittenW = parseInt(w*0.80);   
+        
+/*        var canvas = document.createElement('canvas');
+        canvas.id     = "rityta";
+        canvas.width  = mittenW;
+        canvas.height = $(window).height;
+        canvas.style.zIndex   = 100;
+        canvas.style.position = "absolute";
+        canvas.style.border   = "1px solid red";
+        canvas.boxSizing = "border-box";
+        
+        var minDiv = document.getElementById("mitten");
+        minDiv.appendChild(canvas);*/
         
         $("#rityta").css("width", mittenW + "px"); 
-//        var h = $(window).height();
-//        $("#rityta").css("height", h + "px"); 
-        var r = document.getElementById("#rityta");
-        r.width = mittenW + "px";
-//        r.height = h + "px";
-//        var margin = w*0.20;
-//        $("rityta").css("left", margin + "px");
+        var h = $(window).height();
+        $("#rityta").css("height", h + "px"); 
+        
+        canvasCreated();
     });
 
+    
+    
+});
+
+function canvasCreated()
+{
+    var rityta2 = new RoboroCanvas("canvasCustom");
+
+    rityta2.fill("black");
+    rityta2.circle(25,25,25,"black");
+    rityta2.circle(15, 15, 5, "red");
+    rityta2.circle(30, 10, 5, "blue");
+    rityta2.circle(42, 17, 5, "yellow");
+    rityta2.circle(37, 35, 5, "green");
+    rityta2.circle(25, 40, 5, "cyan");
+    rityta2.circle(13, 28, 5, "purple");
+
+    
     var rityta = new RoboroCanvas("rityta");
     rityta.updatesPerSecond = 100;
     rityta.update = function()
     { 
         with (rityta)
         {
+            
             if (mouse.left)
             {
                 if (isCircle)
                 {
-                    circle(mouse.x, mouse.y, penSize, penColor);
+                    circle(mouse.x, mouse.y, penSize, penColor);              
                 }
                 else
                 {
+                    
                     rectangle(mouse.x, mouse.y, penSize, penSize, penColor);
                 }
             }
         }
     }   
-});
+}
+
 
 var penColor = "black";
 var penSize = 5;
@@ -150,14 +182,9 @@ function blackClick()
     penColor = "black";
 }
 
+function customColor()
+{
+    var col = prompt("Ange ny färg");
+    penColor = col;
+}
 
-/*var rityta = new RoboroCanvas("rityta");
-
-rityta.update = function()
-{ 
-    with (rityta)
-    {
-        fill("green");
-//    rityta.circle(100, 100, 50, "red");
-    }
-}*/
