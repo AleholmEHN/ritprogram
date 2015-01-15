@@ -35,7 +35,16 @@
 /Users/elinhenriksson/Documents/workspace/Cordova/ritprogram/platforms/android/assets/www/img \
 /Users/elinhenriksson/Documents/workspace/Cordova/ritprogram/platforms/android/assets/www/index.html \
 /Users/elinhenriksson/Documents/workspace/Cordova/ritprogram/platforms/android/assets/www/js \
+/Users/elinhenriksson/Documents/workspace/Cordova/ritprogram/platforms/android/assets/www/mintest.html \
 /Users/elinhenriksson/Documents/workspace/Cordova/ritprogram/platforms/android/assets/www/css/index.css \
+/Users/elinhenriksson/Documents/workspace/Cordova/ritprogram/platforms/android/assets/www/img/litenCirkel.png \
+/Users/elinhenriksson/Documents/workspace/Cordova/ritprogram/platforms/android/assets/www/img/litenRect.png \
 /Users/elinhenriksson/Documents/workspace/Cordova/ritprogram/platforms/android/assets/www/img/logo.png \
+/Users/elinhenriksson/Documents/workspace/Cordova/ritprogram/platforms/android/assets/www/img/StorCirkel.png \
+/Users/elinhenriksson/Documents/workspace/Cordova/ritprogram/platforms/android/assets/www/img/storRect.png \
+/Users/elinhenriksson/Documents/workspace/Cordova/ritprogram/platforms/android/assets/www/js/advanced.js \
 /Users/elinhenriksson/Documents/workspace/Cordova/ritprogram/platforms/android/assets/www/js/index.js \
+/Users/elinhenriksson/Documents/workspace/Cordova/ritprogram/platforms/android/assets/www/js/jquery.js \
+/Users/elinhenriksson/Documents/workspace/Cordova/ritprogram/platforms/android/assets/www/js/minjquery.js \
+/Users/elinhenriksson/Documents/workspace/Cordova/ritprogram/platforms/android/assets/www/js/simple.js \
 /Users/elinhenriksson/Documents/workspace/Cordova/ritprogram/platforms/android/ant-build/AndroidManifest.xml \

@@ -129,10 +129,10 @@ h1 {
 #panel_left
 {
     position: absloute;
-box-sizing: border-box;
+    box-sizing: border-box;
     left: 0px;
     top: 0px;
-    background-color: blue;
+    background-color: black;
     width: 10%;
     height: 100%;
     
@@ -145,7 +145,7 @@ box-sizing: border-box;
     position: absolute;
     right: 0px;
     top: 0px;
-    background-color: green;
+    background-color: black; 
     width: 10%;
     height: 100%;
     
@@ -154,20 +154,103 @@ box-sizing: border-box;
 #mitten
 {
     box-sizing: border-box;
-    width: 80%;
-    height: 100%;
-    position: absolute;
+    position: relative;
     top: 0px;
     left: 10%;
+    height: 100%;
 }
 
 #rityta
 {
     box-sizing: border-box;
-    border: 5px solid red;
+    border: 5px solid black;
     width: inherit;
     height: inherit;
-    web-kit: box
     margin: 0 0 0 0;
     padding: 0 0 0 0;
 }
+
+#canvasRed
+{
+    box-sizing: border-box;
+    width: 100%;
+    height: 12.5%;
+    background-color: red;
+}
+
+#canvasBlue
+{
+    box-sizing: border-box;
+    width: 100%;
+    height: 12.5%;
+    background-color: blue;
+}
+
+#canvasGreen
+{
+    box-sizing: border-box;
+    width: 100%;
+    height: 12.5%;
+    background-color: green;
+}
+
+#canvasYellow
+{
+    box-sizing: border-box;
+    width: 100%;
+    height: 12.5%;
+    background-color: yellow;
+}
+
+#canvasWhite
+{
+    box-sizing: border-box;
+    width: 100%;
+    height: 12.5%;
+    background-color: white;
+}
+
+#canvasBlack
+{
+    box-sizing: border-box;
+    width: 100%;
+    height: 12.5%;
+    background-color: black ;
+}
+
+#canvasCustom
+{
+    box-sizing: border-box;
+    width: 100%;
+    height: 12.5%;
+    background-color: white ;
+}
+
+#storCirkel
+{
+    box-sizing: border-box;
+    background-color: white;
+    
+}
+
+#litenCirkel
+{
+    box-sizing: border-box;
+    background-color: white;
+    
+}
+
+#storRekt
+{
+    box-sizing: border-box;
+    background-color: white;
+    
+}
+
+#litenRekt
+{
+    box-sizing: border-box;
+    background-color: white;
+    
+}
+

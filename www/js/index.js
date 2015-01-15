@@ -73,9 +73,34 @@ $(document).ready(function()
         var minDiv = document.getElementById("mitten");
         minDiv.appendChild(canvas);*/
         
-        $("#rityta").css("width", mittenW + "px"); 
+        var ritarea = document.getElementById("rityta");
+        var oldW = ritarea.width;
+        var oldH = ritarea.height;
+        var scaleW = oldW / mittenW;  
         var h = $(window).height();
+        var scaleH = oldH / h;
+        
+       //alert("before " + ritarea.width + " " + ritarea.height);
+        $("#rityta").css("width", mittenW + "px"); 
+        var ritarea = document.getElementById("rityta");
+//        alert(rityta.style.width + " before " + mittenW + " mittenw");
+ //       ritarea.style.width = mittenW + 'px';
+        //alert(rityta.style.width + " after");
         $("#rityta").css("height", h + "px"); 
+//        ritarea.style.height = h + 'px';
+        var rityta1 = new RoboroCanvas("rityta");
+        rityta1.scale(scaleW, scaleH);
+        
+        
+        var kant = parseInt(w*0.10);
+        $("#storCirkel").css("width", kant + "px");
+        $("#storCirkel").css("height", kant + "px");
+        $("#litenCirkel").css("width", kant + "px");
+        $("#litenCirkel").css("height", kant + "px");
+        $("#storRekt").css("width", kant + "px");
+        $("#storRekt").css("height", kant + "px");
+        $("#litenRekt").css("width", kant + "px");
+        $("#litenRekt").css("height", kant + "px");
         
         canvasCreated();
     });
@@ -96,6 +121,15 @@ function canvasCreated()
     rityta2.circle(37, 35, 5, "green");
     rityta2.circle(25, 40, 5, "cyan");
     rityta2.circle(13, 28, 5, "purple");
+    
+    var storC = new RoboroCanvas("storCirkel");
+    storC.circle(50, 50, 50, "black");
+    var litenC = new RoboroCanvas("litenCirkel");
+    litenC.circle(50, 50, 20, "black");
+    var storR = new RoboroCanvas("storRekt");
+    storR.rectangle(25, 25, 50, 50, "black");
+    var litenR = new RoboroCanvas("litenRekt");
+    litenR.rectangle(40, 40, 20, 20, "black");
 
     
     var rityta = new RoboroCanvas("rityta");
@@ -107,9 +141,15 @@ function canvasCreated()
             
             if (mouse.left)
             {
+ /*               var canvas = document.getElementById("rityta");
+                var rect = canvas.getBoundingClientRect();
+                var newX = mouse.x + rect.left;
+                var newY =  mouse.y + rect.top;
+*/
                 if (isCircle)
                 {
-                    circle(mouse.x, mouse.y, penSize, penColor);              
+                   circle(mouse.x, mouse.y, penSize, penColor);            
+ //                   circle(newX, newY, penSize, penColor);              
                 }
                 else
                 {

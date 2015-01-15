@@ -24,22 +24,64 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" /> 
         <title>Ritprogram</title>
+        
+              
     </head>
     <body>
-        <div id="ruta">
-    
+        <div id="ruta">            
             <div id="panel_left">
-                </div>
+        
+                <canvas id="canvasRed" width="50px" height="50px" onclick="redClick()">
+                </canvas>
+                
+                <canvas id="canvasGreen" width="50px" height="50px" onclick="greenClick()">
+                </canvas>
+                <canvas id="canvasBlue" width="50px" height="50px" onclick="blueClick()">
+                </canvas>
+                <canvas id="canvasYellow" width="50px" height="50px" onclick="yellowClick()">
+                </canvas>
+                
+                <canvas id="canvasBlack" width="50px" height="50px" onclick="blackClick()">
+                </canvas>
+                <canvas id="canvasWhite" width="50px" height="50px" onclick="whiteClick()">
+                </canvas>
+                <canvas id="canvasCustom" width="50px" height="50px" onclick="customColor()"></canvas>
+            </div>
+<                </div>
             <div id="mitten">
-                <canvas id="rityta" width="100px" height="100px"></canvas>
+                <canvas id="rityta" width="1100px" height="500px"></canvas>
             </div> 
+    
+            
             <div id="panel_right">
-                </div>
- 
-    </div>
+                <canvas id="storCirkel" width="100px" height="100px" onclick="largeCClick()"></canvas>
+                <canvas id="litenCirkel" width="100px" height="100px" onclick="smallCClick()"></canvas>
+                <canvas id="storRekt" width="100px" height="100px" onclick="largeRClick()"></canvas>                    
+                <canvas id="litenRekt" width="100px" height="100px" onclick="smallRClick()"></canvas>
+
+
+                <!--
+                <img src="img/StorCirkel.png" onclick="largeCClick()" />
+                <img src="img/LitenCirkel.png" onclick="smallCClick()" />
+                <img src="img/StorRect.png" onclick="largeRClick()" />
+                <img src="img/LitenRect.png" onclick="smallRClick()" />  -->
+
+            </div>
+           
+        </div>
+        
+        
+        <script type="text/javascript" src="js/minjquery.js"></script>
+        
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/advanced.js"></script>
     </body>
+
 </html>
+
+        
+        
+        
