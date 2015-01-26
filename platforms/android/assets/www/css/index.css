@@ -164,8 +164,8 @@ h1 {
 {
     box-sizing: border-box;
     border: 5px solid black;
-    width: inherit;
-    height: inherit;
+    width: 80%;
+    height: 100%;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
 }

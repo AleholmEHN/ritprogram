@@ -60,22 +60,19 @@ $(document).ready(function()
     {
         var w = $(window).width();
         var mittenW = parseInt(w*0.80);   
-        
-/*        var canvas = document.createElement('canvas');
-        canvas.id     = "rityta";
-        canvas.width  = mittenW;
-        canvas.height = $(window).height;
-        canvas.style.zIndex   = 100;
-        canvas.style.position = "absolute";
-        canvas.style.border   = "1px solid red";
-        canvas.boxSizing = "border-box";
-        
-        var minDiv = document.getElementById("mitten");
-        minDiv.appendChild(canvas);*/
+                
+        var ritarea = document.getElementById("rityta");
+        var oldW = ritarea.width;
+        var oldH = ritarea.height;
+        var scaleW = oldW / mittenW;  
+        var h = $(window).height();
+        var scaleH = oldH / h;
         
         $("#rityta").css("width", mittenW + "px"); 
-        var h = $(window).height();
+        var ritarea = document.getElementById("rityta");
         $("#rityta").css("height", h + "px"); 
+        var rityta1 = new RoboroCanvas("rityta");
+        rityta1.scale(scaleW, scaleH);        
         
         var kant = parseInt(w*0.10);
         $("#storCirkel").css("width", kant + "px");
@@ -87,58 +84,49 @@ $(document).ready(function()
         $("#litenRekt").css("width", kant + "px");
         $("#litenRekt").css("height", kant + "px");
         
-        canvasCreated();
-    });
+        var rityta2 = new RoboroCanvas("canvasCustom");
+
+        rityta2.fill("black");
+        rityta2.circle(25,25,25,"black");
+        rityta2.circle(15, 15, 5, "red");
+        rityta2.circle(30, 10, 5, "blue");
+        rityta2.circle(42, 17, 5, "yellow");
+        rityta2.circle(37, 35, 5, "green");
+        rityta2.circle(25, 40, 5, "cyan");
+        rityta2.circle(13, 28, 5, "purple");
+    
+        var storC = new RoboroCanvas("storCirkel");
+        storC.circle(50, 50, 50, "black");
+        var litenC = new RoboroCanvas("litenCirkel");
+        litenC.circle(50, 50, 20, "black");
+        var storR = new RoboroCanvas("storRekt");
+        storR.rectangle(25, 25, 50, 50, "black");
+        var litenR = new RoboroCanvas("litenRekt");
+        litenR.rectangle(40, 40, 20, 20, "black");
 
     
-    
-});
-
-function canvasCreated()
-{
-    var rityta2 = new RoboroCanvas("canvasCustom");
-
-    rityta2.fill("black");
-    rityta2.circle(25,25,25,"black");
-    rityta2.circle(15, 15, 5, "red");
-    rityta2.circle(30, 10, 5, "blue");
-    rityta2.circle(42, 17, 5, "yellow");
-    rityta2.circle(37, 35, 5, "green");
-    rityta2.circle(25, 40, 5, "cyan");
-    rityta2.circle(13, 28, 5, "purple");
-    
-    var storC = new RoboroCanvas("storCirkel");
-    storC.circle(50, 50, 50, "black");
-    var litenC = new RoboroCanvas("litenCirkel");
-    litenC.circle(50, 50, 20, "black");
-    var storR = new RoboroCanvas("storRekt");
-    storR.rectangle(25, 25, 50, 50, "black");
-    var litenR = new RoboroCanvas("litenRekt");
-    litenR.rectangle(40, 40, 20, 20, "black");
-
-    
-    var rityta = new RoboroCanvas("rityta");
-    rityta.updatesPerSecond = 100;
-    rityta.update = function()
-    { 
-        with (rityta)
-        {
-            
-            if (mouse.left)
+        var rityta = new RoboroCanvas("rityta");
+        rityta.updatesPerSecond = 100;
+        rityta.update = function()
+        { 
+            with (rityta)
             {
-                if (isCircle)
+            
+                if (mouse.left)
                 {
-                    circle(mouse.x, mouse.y, penSize, penColor);              
-                }
-                else
-                {
-                    
-                    rectangle(mouse.x, mouse.y, penSize, penSize, penColor);
+                    if (isCircle)
+                    {
+                    circle(mouse.x, mouse.y, penSize, penColor);            
+                    }
+                    else
+                    {
+                        rectangle(mouse.x, mouse.y, penSize, penSize, penColor);
+                    }
                 }
             }
-        }
-    }   
-}
+        }   
+    });
+});
 
 
 var penColor = "black";
