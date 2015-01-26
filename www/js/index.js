@@ -69,10 +69,12 @@ $(document).ready(function()
         var scaleH = oldH / h;
         
         $("#rityta").css("width", mittenW + "px"); 
-        var ritarea = document.getElementById("rityta");
+//        var ritarea = document.getElementById("rityta");
         $("#rityta").css("height", h + "px"); 
-        var rityta1 = new RoboroCanvas("rityta");
-        rityta1.scale(scaleW, scaleH);        
+//        var rityta1 = new RoboroCanvas("rityta");
+//        rityta1.scale(scaleW, scaleH);        
+        var rityta = new RoboroCanvas("rityta");
+        rityta.scale(scaleW, scaleH);        
         
         var kant = parseInt(w*0.10);
         $("#storCirkel").css("width", kant + "px");
@@ -105,7 +107,7 @@ $(document).ready(function()
         litenR.rectangle(40, 40, 20, 20, "black");
 
     
-        var rityta = new RoboroCanvas("rityta");
+//        var rityta = new RoboroCanvas("rityta");
         rityta.updatesPerSecond = 100;
         rityta.update = function()
         { 
